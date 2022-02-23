@@ -1,8 +1,5 @@
 {
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": ".."
-  },
+  "image": "ghcr.io/heyajulia/raytracerhs:91768d02cbd6d0bc3829edb39d78052bce14f888",
   "extensions": ["haskell.haskell", "github.copilot"],
   "remoteEnv": {
     "PATH": "/home/vscode/.ghcup/bin:${containerEnv:PATH}"
