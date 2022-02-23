@@ -1,0 +1,10 @@
+{
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "extensions": ["haskell.haskell", "github.copilot"],
+  "remoteEnv": {
+    "PATH": "/home/vscode/.ghcup/bin:${containerEnv:PATH}"
+  }
+}
