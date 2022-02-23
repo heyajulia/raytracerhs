@@ -1,3 +1,4 @@
+*.hi
+*.o
+image.*
 main
-main.hi
-main.o
