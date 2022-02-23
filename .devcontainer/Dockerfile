@@ -4,7 +4,7 @@ ARG BOOTSTRAP_HASKELL_NONINTERACTIVE=true
 ARG BOOTSTRAP_HASKELL_INSTALL_HLS=true
 
 RUN apt-get update && \
-    apt-get install -y \
+    apt-get install --no-install-recommends -y \
     build-essential \
     curl \
     libffi-dev \
@@ -13,7 +13,8 @@ RUN apt-get update && \
     libgmp10 \
     libncurses-dev \
     libncurses5 \
-    libtinfo5
+    libtinfo5 && \
+    rm -rf /var/lib/apt/lists/*
 
 USER vscode
 
