@@ -18,4 +18,6 @@ RUN apt-get update && \
 
 USER vscode
 
-RUN curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+RUN curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh && \
+    # There doesn't seem to be a way to avoid writing to the cache in the first place...
+    rm -r ${HOME}/.ghcup/cache
